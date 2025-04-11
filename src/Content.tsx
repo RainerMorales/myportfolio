@@ -35,24 +35,24 @@ function Content() {
         </div>
       </section>
       <section className="mt-20 p-4 grid gap-4 max-w-2xl m-auto ">
-        <div className="space-y-4 p-6 border rounded-md bg-accent">
+        <div className="space-y-4 p-6 border rounded-md ">
           <h1 className="font-bold text-xl flex items-center gap-2">
             <IoBookSharp />
             Summary
           </h1>
           <p className="opacity-80">{summary}</p>
         </div>
-        <div className="space-y-4 p-6 border rounded-md bg-accent">
+        <div className="space-y-4 p-6 border rounded-md ">
           <h1 className="font-bold text-xl flex items-center gap-2">
             <BsMortarboardFill />
             Education
           </h1>
           <div className="space-x-2">
             <span className="opacity-80 ">BS in Information Technology</span>
-            <Badge className="bg-black text-white">2024</Badge>
+            <Badge className="">2024</Badge>
           </div>
         </div>
-        <div className="space-y-4 p-6 border rounded-md bg-accent">
+        <div className="space-y-4 p-6 border rounded-md ">
           <h1 className="font-bold text-xl flex items-center gap-2">
             <FaLaptopCode />
             Tech Stack
@@ -71,7 +71,7 @@ function Content() {
                 "Node js",
               ].map((tool) => (
                 <li className="text-center" key={tool}>
-                  <Badge className="bg-black text-white">{tool}</Badge>
+                  <Badge className="">{tool}</Badge>
                 </li>
               ))}
             </ul>
@@ -90,7 +90,7 @@ function Content() {
                 "React Bits",
               ].map((tool) => (
                 <li className="text-center" key={tool}>
-                  <Badge className="bg-black text-white">{tool}</Badge>
+                  <Badge className="">{tool}</Badge>
                 </li>
               ))}
             </ul>
