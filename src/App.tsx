@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div className='fixed top-8 right-5  '>
+      <div className='fixed top-8 right-5 z-50  '>
         <ThemeProvider  defaultTheme="dark" storageKey="vite-ui-theme">
           <ModeToggle></ModeToggle>
         </ThemeProvider>
