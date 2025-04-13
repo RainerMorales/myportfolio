@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div className='flex justify-end'>
+      <div className='fixed top-8 right-5  '>
         <ThemeProvider  defaultTheme="dark" storageKey="vite-ui-theme">
           <ModeToggle></ModeToggle>
         </ThemeProvider>

@@ -5,32 +5,30 @@ import { BsMortarboardFill } from "react-icons/bs";
 import { FaLaptopCode } from "react-icons/fa";
 import { IoBookSharp } from "react-icons/io5";
 import { Badge } from "@/components/ui/badge";
-
 function Content() {
   const summary =
     "I'm a front-end developer passionate about creating interactive and visually engaging web experiences. I specialize in React, Vite, Tailwind CSS, and Framer Motion, bringing modern designs to life with smooth animations and responsive layouts. Always eager to learn and improve, I focus on building user-friendly interfaces that enhance the web experience";
   return (
     <>
-      <section className="mt-20 max-w-2xl m-auto">
-        <div className=" m-auto  gap-2  flex justify-center items-center">
-          <div>
-            <div className="font-bold text-3xl"> Hi! I'm Rainer</div>
-            <div className="text-md "> Front-End Developer</div>
-            <div className="text-md opacity-80">Philippines</div>
-            <div className="flex mt-6 gap-2">
-              <a href="">
-                <FaSquareGithub size={30} />
-              </a>
-              <a href="">
-                <FaFacebookSquare size={30} />
-              </a>
-              <a href="">
-                <FaSquareInstagram size={30} />
-              </a>
-            </div>
-          </div>
-          <div>
-            <img className="w-40 rounded-full" src="profiles.jpg" alt="" />
+      
+      <section className="grid gap-6 justify-center mt-20 max-w-2xl m-auto">
+        <div className="m-auto">
+          <img className="w-40 rounded-full" src="profiles.jpg" alt="" />
+        </div>
+        <div className="text-center">
+          <div className="font-bold text-3xl"> Hi! I'm Rainer</div>
+          <div className="text-md "> Front-End Developer</div>
+          <div className="text-md opacity-80">Bataan,Philippines</div>
+          <div className="flex justify-center mt-6 gap-2">
+            <a href="">
+              <FaSquareGithub size={30} />
+            </a>
+            <a href="">
+              <FaFacebookSquare size={30} />
+            </a>
+            <a href="">
+              <FaSquareInstagram size={30} />
+            </a>
           </div>
         </div>
       </section>
