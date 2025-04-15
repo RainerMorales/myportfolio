@@ -1,4 +1,4 @@
-function Nav(){
+function Projects(){
     return(
         <>
         
@@ -6,4 +6,4 @@ function Nav(){
     )
 }
 
-export default Nav
+export default Projects
