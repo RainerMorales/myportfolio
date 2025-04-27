@@ -8,7 +8,10 @@ import { Badge } from "@/components/ui/badge";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import Card from "./Card";
 function Content() {
+  const todo =
+    "I built a responsive and modern To-Do List application using React for the frontend logic, Tailwind CSS for styling, and ShadCN UI components for consistent and accessible design.";
   const summary =
     "I'm a front-end developer passionate about creating interactive and visually engaging web experiences. I specialize in React, Vite, Tailwind CSS, and Framer Motion, bringing modern designs to life with smooth animations and responsive layouts. Always eager to learn and improve, I focus on building user-friendly interfaces that enhance the web experience";
   return (
@@ -19,12 +22,13 @@ function Content() {
         </div>
         <div className="text-center">
           <TypingAnimation className="flex items-center h-10 font-bold text-3xl">
-            Hi! I'm Rainer &#128526;
+            Hi! I'm Rainer
           </TypingAnimation>
           <div className="text-md ">
             {" "}
             <AuroraText>Front-End</AuroraText> Developer
           </div>
+
           <div className="text-md opacity-80">Bataan,Philippines</div>
           <div className="flex justify-center mt-6 gap-2">
             <a href="#">
@@ -105,12 +109,10 @@ function Content() {
           </div>
         </div>
       </BlurFade>
-      <section className="p-16 grid gap-4 max-w-2xl m-auto">
-        <div className="text-4xl text-center font-bold">Recent Projects</div>
-        <div className="border rounded-md flex justify-center">
-          <img src="download.png" alt="" />
-        </div>
-        <div>s</div>
+      <div className="text-3xl text-center font-bold">Recent Projects</div>
+      <section className="p-4 grid gap-4 max-w-2xl m-auto">
+        <Card names={"To-Do List"} description={todo}></Card>
+        <Card names={"Weather App"} description={todo}></Card>
       </section>
     </>
   );
