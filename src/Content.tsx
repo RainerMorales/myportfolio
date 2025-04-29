@@ -97,6 +97,7 @@ function Content() {
             <ul className="flex  flex-wrap gap-2 mt-1">
               {[
                 "Git",
+                "Magic UI",
                 "GitHub",
                 "VS Code",
                 "NPM",
@@ -129,6 +130,14 @@ function Content() {
               alt="image"
             />
           }
+          link={
+            <a
+              className="btn rounded"
+              href="https://react-todolist2025.vercel.app/"
+            >
+              Visit
+            </a>
+          }
         ></Card>
         <Card
           names={"Weather App"}
@@ -139,6 +148,14 @@ function Content() {
               src="Weather.png"
               alt="image"
             />
+          }
+          link={
+            <a
+              className="btn rounded"
+              href="https://weather-app2025.vercel.app/"
+            >
+              Visit
+            </a>
           }
         ></Card>
       </BlurFade>

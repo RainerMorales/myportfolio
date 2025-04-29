@@ -5,6 +5,7 @@ interface cardProps {
   names: string;
   description: string;
   pic: ReactElement;
+  link: ReactElement;
 }
 function Card(props: cardProps) {
   return (
@@ -20,6 +21,7 @@ function Card(props: cardProps) {
                 <Badge key={names}>{names}</Badge>
               ))}
             </div>
+            <div>{props.link}</div>
           </div>
         </div>
       </div>
