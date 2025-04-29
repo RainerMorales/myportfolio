@@ -1,16 +1,16 @@
 import { Badge } from "@/components/ui/badge";
+import { ReactElement } from "react";
 
-interface cardProps{
-    names:string
-    description:string
+interface cardProps {
+  names: string;
+  description: string;
+  pic: ReactElement;
 }
-function Card(props:cardProps) {
+function Card(props: cardProps) {
   return (
     <>
       <div className="card border rounded-md shadow-sm m-auto">
-        <figure>
-          <img src="todo.png" alt="Shoes" />
-        </figure>
+        <figure className="h-50">{props.pic}</figure>
         <div className="card-body">
           <h2 className="card-title">{props.names}</h2>
           <p>{props.description}</p>
@@ -20,13 +20,6 @@ function Card(props:cardProps) {
                 <Badge key={names}>{names}</Badge>
               ))}
             </div>
-            <a
-              href="https://react-todolist2025.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="btn border-2 rounded-full">Visit</button>
-            </a>
           </div>
         </div>
       </div>

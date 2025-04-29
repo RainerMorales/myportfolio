@@ -9,6 +9,7 @@ import { AuroraText } from "@/components/magicui/aurora-text";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import Card from "./Card";
+
 function Content() {
   const todo =
     "I built a responsive and modern To-Do List application using React for the frontend logic, Tailwind CSS for styling, and ShadCN UI components for consistent and accessible design.";
@@ -43,15 +44,18 @@ function Content() {
           </div>
         </div>
       </BlurFade>
-      <BlurFade delay={0.2} className="mt-20 p-4 grid gap-4 max-w-2xl m-auto ">
-        <div className="space-y-4 p-6 border rounded-md ">
+      <BlurFade
+        delay={0.2}
+        className="mt-20 p-4 grid lg:grid-cols-2 lg:grid-rows-2 grid-cols-1  gap-4 max-w-3xl m-auto "
+      >
+        <div className="space-y-4 p-6 border rounded-md lg:col-span-1 ">
           <h1 className="font-bold text-xl flex items-center gap-2">
             <IoBookSharp />
             Summary
           </h1>
           <p className="opacity-80">{summary}</p>
         </div>
-        <div className="space-y-4 p-6 border rounded-md ">
+        <div className="space-y-4 p-6 border rounded-md lg:col-span-1 ">
           <h1 className="font-bold text-xl flex items-center gap-2">
             <BsMortarboardFill />
             Education
@@ -64,7 +68,7 @@ function Content() {
             <Badge className="">2024</Badge>
           </div>
         </div>
-        <div className="space-y-4 p-6 border rounded-md ">
+        <div className="space-y-4 p-6 border rounded-md lg:col-span-2  ">
           <h1 className="font-bold text-xl flex items-center gap-2">
             <FaLaptopCode />
             Tech Stack
@@ -108,12 +112,36 @@ function Content() {
             </ul>
           </div>
         </div>
+        <div className="text-3xl text-center font-bold">Recent Projects</div>
       </BlurFade>
-      <div className="text-3xl text-center font-bold">Recent Projects</div>
-      <section className="p-4 grid gap-4 max-w-2xl m-auto">
-        <Card names={"To-Do List"} description={todo}></Card>
-        <Card names={"Weather App"} description={todo}></Card>
-      </section>
+
+      <BlurFade
+        delay={0.3}
+        className="p-4 grid lg:grid-cols-2 gap-4 max-w-3xl m-auto"
+      >
+        <Card
+          names={"To-Do List"}
+          description={todo}
+          pic={
+            <img
+              className="w-full h-full lg:object-cover object-contain"
+              src="todo.png"
+              alt="image"
+            />
+          }
+        ></Card>
+        <Card
+          names={"Weather App"}
+          description={todo}
+          pic={
+            <img
+              className="w-full h-full lg:object-cover object-contain"
+              src="Weather.png"
+              alt="image"
+            />
+          }
+        ></Card>
+      </BlurFade>
     </>
   );
 }
