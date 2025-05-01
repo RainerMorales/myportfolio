@@ -19,9 +19,9 @@ function Projects() {
         </div>
         <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 p-4   gap-4 ">
           <Card
-            names={"Task Manager"}
+            names={"Todo-List"}
             description={
-              "I'm building a task manager app using ReactJS with Firebase authentication for sign-in, and I'm implementing ShadCN UI components styled with Tailwind CSS for a seamless user experience."
+              "My to-do list app, built with React, Tailwind CSS, and ShadCN UI, lets users create and delete tasks, with persistent storage using the browser's localStorage."
             }
             pic={
               <img

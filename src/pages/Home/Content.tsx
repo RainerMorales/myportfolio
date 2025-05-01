@@ -10,7 +10,7 @@ import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Link } from "react-router-dom";
 import Card from "../../components/Card";
-
+import { FaArrowRightLong } from "react-icons/fa6";
 function Content() {
   const Dates = new Date();
   const Years = Dates.getFullYear();
@@ -24,7 +24,7 @@ function Content() {
         </div>
         <div className="text-center">
           <TypingAnimation className="flex items-center h-10 font-bold text-3xl">
-            Hi! I'm Rainer
+            Hi! I'm Rainer ☺️
           </TypingAnimation>
           <div className="text-md ">
             <AuroraText>Front-End</AuroraText> Developer
@@ -32,7 +32,7 @@ function Content() {
 
           <div className="text-md opacity-80">Bataan,Philippines</div>
           <div className="flex justify-center mt-6 gap-2">
-            <a href="#">
+            <a href="https://github.com/RainerMorales">
               <FaSquareGithub size={30} />
             </a>
             <a href="https://www.facebook.com/share/1KPaDDbDwH/">
@@ -115,16 +115,16 @@ function Content() {
           <div className="flex items-center justify-between p-4">
             <div className="text-xl  font-bold">Recent Projects</div>
             <Link
-              className="text-sm link link-hover font-mono opacity-80"
+              className="text-sm flex items-center gap-2 link link-hover font-mono opacity-80"
               to={"/Projects"}
             >
-              View All
+              View All <FaArrowRightLong/>
             </Link>
           </div>
           <Card
-            names={"Task Manager"}
+            names={"Todo-List"}
             description={
-              "I'm building a task manager app using ReactJS with Firebase authentication for sign-in, and I'm implementing ShadCN UI components styled with Tailwind CSS for a seamless user experience."
+              "My to-do list app, built with React, Tailwind CSS, and ShadCN UI, lets users create and delete tasks, with persistent storage using the browser's localStorage."
             }
             pic={
               <img
