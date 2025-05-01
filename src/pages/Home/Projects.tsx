@@ -1,0 +1,69 @@
+import { Link } from "react-router-dom";
+import Card from "../../components/Card";
+import { BlurFade } from "@/components/magicui/blur-fade";
+import { FaArrowLeftLong } from "react-icons/fa6";
+
+function Projects() {
+  return (
+    <>
+      <BlurFade className="mt- max-w-4xl m-auto  rounded-sm">
+        <div className="flex items-center p-4 space-x-4">
+          <Link
+            className="text-sm link link-hover font-mono opacity-80 flex items-center gap-2"
+            to={"/"}
+          >
+            <FaArrowLeftLong />
+            Home
+          </Link>
+          <div className="text-xl">Recent Projects</div>
+        </div>
+        <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 p-4   gap-4 ">
+          <Card
+            names={"Task Manager"}
+            description={
+              "I'm building a task manager app using ReactJS with Firebase authentication for sign-in, and I'm implementing ShadCN UI components styled with Tailwind CSS for a seamless user experience."
+            }
+            pic={
+              <img
+                className="w-full h-full object-cover"
+                src="todo.png"
+                alt="image"
+              />
+            }
+            link={
+              <a
+                className="link link-hover font-mono opacity-80"
+                href="https://react-todolist2025.vercel.app/"
+              >
+                Visit
+              </a>
+            }
+          ></Card>
+          <Card
+            names={"Weather App"}
+            description={
+              "I'm developing a weather app using React and the OpenWeather API to provide real-time weather updates with an intuitive user interface"
+            }
+            pic={
+              <img
+                className="w-full h-full lg:object-cover object-contain"
+                src="Weather.png"
+                alt="image"
+              />
+            }
+            link={
+              <a
+                className="link link-hover font-mono"
+                href="https://weather-app2025.vercel.app/"
+              >
+                Visit
+              </a>
+            }
+          ></Card>
+        </div>
+      </BlurFade>
+    </>
+  );
+}
+
+export default Projects;

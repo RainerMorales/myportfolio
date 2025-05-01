@@ -8,11 +8,12 @@ import { Badge } from "@/components/ui/badge";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import Card from "./Card";
+import { Link } from "react-router-dom";
+import Card from "../../components/Card";
 
 function Content() {
-  const todo =
-    "I built a responsive and modern To-Do List application using React for the frontend logic, Tailwind CSS for styling, and ShadCN UI components for consistent and accessible design.";
+  const Dates = new Date();
+  const Years = Dates.getFullYear();
   const summary =
     "I'm a front-end developer passionate about creating interactive and visually engaging web experiences. I specialize in React, Vite, Tailwind CSS, and Framer Motion, bringing modern designs to life with smooth animations and responsive layouts. Always eager to learn and improve, I focus on building user-friendly interfaces that enhance the web experience";
   return (
@@ -26,7 +27,6 @@ function Content() {
             Hi! I'm Rainer
           </TypingAnimation>
           <div className="text-md ">
-            {" "}
             <AuroraText>Front-End</AuroraText> Developer
           </div>
 
@@ -46,29 +46,16 @@ function Content() {
       </BlurFade>
       <BlurFade
         delay={0.2}
-        className="mt-20 p-4 grid lg:grid-cols-2 lg:grid-rows-2 grid-cols-1  gap-4 max-w-3xl m-auto "
+        className="mt-20 p-4 grid lg:grid-cols-3 md:grid-cols-3 md:grid-rows-2 gap-4 max-w-4xl m-auto "
       >
-        <div className="space-y-4 p-6 border rounded-md lg:col-span-1 ">
+        <div className="lg:col-span-1 md:col-span-1 space-y-4 p-6 border rounded-md ">
           <h1 className="font-bold text-xl flex items-center gap-2">
             <IoBookSharp />
             Summary
           </h1>
           <p className="opacity-80">{summary}</p>
         </div>
-        <div className="space-y-4 p-6 border rounded-md lg:col-span-1 ">
-          <h1 className="font-bold text-xl flex items-center gap-2">
-            <BsMortarboardFill />
-            Education
-          </h1>
-          <div className="space-x-2">
-            <div className="font-bold">
-              Eastwoods Proffesional College of Science and Technology
-            </div>
-            <span className="opacity-80 ">BS in Information Technology</span>
-            <Badge className="">2024</Badge>
-          </div>
-        </div>
-        <div className="space-y-4 p-6 border rounded-md lg:col-span-2  ">
+        <div className="lg:col-span-2 md:col-span-2 space-y-4 p-6 border rounded-md  ">
           <h1 className="font-bold text-xl flex items-center gap-2">
             <FaLaptopCode />
             Tech Stack
@@ -80,6 +67,7 @@ function Content() {
                 "HTML",
                 "CSS",
                 "Javascript",
+                "Typescript",
                 "Tailwind CSS",
                 "Bootstrap",
                 "React js",
@@ -94,7 +82,7 @@ function Content() {
           </div>
           <div className="space-x-2">
             <span className="opacity-80 ">Developer Tools</span>
-            <ul className="flex  flex-wrap gap-2 mt-1">
+            <ul className="flex flex-wrap gap-2 mt-1">
               {[
                 "Git",
                 "Magic UI",
@@ -113,52 +101,52 @@ function Content() {
             </ul>
           </div>
         </div>
-        <div className="text-3xl text-center font-bold">Recent Projects</div>
-      </BlurFade>
-
-      <BlurFade
-        delay={0.3}
-        className="p-4 grid lg:grid-cols-2 gap-4 max-w-3xl m-auto"
-      >
-        <Card
-          names={"To-Do List"}
-          description={todo}
-          pic={
-            <img
-              className="w-full h-full lg:object-cover object-contain"
-              src="todo.png"
-              alt="image"
-            />
-          }
-          link={
-            <a
-              className="btn rounded"
-              href="https://react-todolist2025.vercel.app/"
+        <div className="lg:col-span-1 space-y-4 p-6 border rounded-md ">
+          <h1 className="font-bold text-xl flex items-center gap-2">
+            <BsMortarboardFill />
+            Education
+          </h1>
+          <div className="text-sm flex justify-between items-center">
+            <span className="opacity-80 ">BS in Information Technology</span>
+            <Badge className="">2024</Badge>
+          </div>
+        </div>
+        <div className="lg:col-span-2 md:col-span-2 p-2 border rounded-sm ">
+          <div className="flex items-center justify-between p-4">
+            <div className="text-xl  font-bold">Recent Projects</div>
+            <Link
+              className="text-sm link link-hover font-mono opacity-80"
+              to={"/Projects"}
             >
-              Visit
-            </a>
-          }
-        ></Card>
-        <Card
-          names={"Weather App"}
-          description={todo}
-          pic={
-            <img
-              className="w-full h-full lg:object-cover object-contain"
-              src="Weather.png"
-              alt="image"
-            />
-          }
-          link={
-            <a
-              className="btn rounded"
-              href="https://weather-app2025.vercel.app/"
-            >
-              Visit
-            </a>
-          }
-        ></Card>
+              View All
+            </Link>
+          </div>
+          <Card
+            names={"Task Manager"}
+            description={
+              "I'm building a task manager app using ReactJS with Firebase authentication for sign-in, and I'm implementing ShadCN UI components styled with Tailwind CSS for a seamless user experience."
+            }
+            pic={
+              <img
+                className="w-full h-full object-cover"
+                src="todo.png"
+                alt="image"
+              />
+            }
+            link={
+              <a
+                className="link link-hover font-mono opacity-80 "
+                href="https://react-todolist2025.vercel.app/"
+              >
+                Visit
+              </a>
+            }
+          ></Card>
+        </div>
       </BlurFade>
+      <footer className="mt-20 p-6 flex flex-col justify-center items-center opacity-60">
+        Developed by Rainer Morales <br /> © {Years}. All rights reserved
+      </footer>
     </>
   );
 }
