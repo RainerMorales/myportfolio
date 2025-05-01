@@ -11,6 +11,7 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 import { Link } from "react-router-dom";
 import Card from "../../components/Card";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { CgWebsite } from "react-icons/cg";
 function Content() {
   const Dates = new Date();
   const Years = Dates.getFullYear();
@@ -113,12 +114,15 @@ function Content() {
         </div>
         <div className="lg:col-span-2 md:col-span-2 p-2 border rounded-sm ">
           <div className="flex items-center justify-between p-4">
-            <div className="text-xl  font-bold">Recent Projects</div>
+            <div className="flex items-center gap-2 text-xl  font-bold">
+              <CgWebsite />
+              Recent Projects
+            </div>
             <Link
               className="text-sm flex items-center gap-2 link link-hover font-mono opacity-80"
               to={"/Projects"}
             >
-              View All <FaArrowRightLong/>
+              View All <FaArrowRightLong />
             </Link>
           </div>
           <Card

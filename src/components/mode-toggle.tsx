@@ -14,7 +14,7 @@ export function ModeToggle() {
 
   return (
     <>
-    <Toaster></Toaster>
+      <Toaster></Toaster>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="icon">
@@ -27,7 +27,7 @@ export function ModeToggle() {
           <DropdownMenuItem
             onClick={() => {
               setTheme("light");
-              toast("Light Mode!", {
+              toast.success("Light Mode!", {
                 icon: "🔆",
                 style: {
                   borderRadius: "10px",
@@ -41,8 +41,10 @@ export function ModeToggle() {
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() => {
+              toast.dismiss("s");
               setTheme("dark");
-              toast("Dark Mode!", {
+              toast.success("Dark Mode!", {
+                id: "s",
                 icon: "🌙",
                 style: {
                   borderRadius: "10px",
@@ -54,17 +56,21 @@ export function ModeToggle() {
           >
             Dark
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => {
-            setTheme("system");
-            toast("System Default!", {
-              icon: "☺️",
-              style: {
-                borderRadius: "10px",
-                background: "#333",
-                color: "#fff",
-              },
-            });
-          }}>
+          <DropdownMenuItem
+            onClick={() => {
+              setTheme("system");
+              toast.dismiss("w");
+              toast("System Default!", {
+                id: "w",
+                icon: "☺️",
+                style: {
+                  borderRadius: "10px",
+                  background: "#333",
+                  color: "#fff",
+                },
+              });
+            }}
+          >
             System
           </DropdownMenuItem>
         </DropdownMenuContent>

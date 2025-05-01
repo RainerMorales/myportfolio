@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Card from "../../components/Card";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { FaArrowLeftLong } from "react-icons/fa6";
-
+import { CgWebsite } from "react-icons/cg";
 function Projects() {
   return (
     <>
@@ -15,7 +15,7 @@ function Projects() {
             <FaArrowLeftLong />
             Home
           </Link>
-          <div className="text-xl">Recent Projects</div>
+          <div className="flex items-center gap-2 text-xl"><CgWebsite/>Recent Projects</div>
         </div>
         <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 p-4   gap-4 ">
           <Card
