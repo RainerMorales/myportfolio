@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+
 import { ReactElement } from "react";
 
 interface cardProps {
@@ -6,22 +6,25 @@ interface cardProps {
   description: string;
   pic: ReactElement;
   link: ReactElement;
+  badge:ReactElement
 }
 function Card(props: cardProps) {
   return (
     <>
       <div className="card border m-2 rounded-md ">
-        <figure className="h-35">{props.pic}</figure>
+        <figure className="">
+          {props.pic}
+        </figure>
         <div className="card-body space-y-2">
           <h2 className="card-title">{props.names}</h2>
           <p>{props.description}</p>
           <div className="card-actions justify-between items-center ">
-            <div className="space-x-2">
-              {["React JS", "Tailwind", "Shadcn"].map((names) => (
-                <Badge key={names}>{names}</Badge>
-              ))}
+            <ul className="">
+              <li className="space-x-2">{props.badge}</li>
+            </ul>
+            <div className="link link-hover hover:opacity-80 font-mono">
+              {props.link}
             </div>
-            <div>{props.link}</div>
           </div>
         </div>
       </div>
